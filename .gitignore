@@ -73,3 +73,13 @@ hs_err_pid*
 # Misc
 .DS_Store
 .externalNativeBuild
+.gitignore
+.idea/
+android-xml-font-views/
+build.gradle
+gradle.properties
+gradle/
+gradlew
+gradlew.bat
+sample/
+settings.gradle
