@@ -35,8 +35,8 @@ ext {
     bintrayName = 'android-xml-font-views'
 
     publishedGroupId = 'com.sumitanantwar'
-    libraryName = 'sa-android-xml-font-views'
-    artifact = 'sa-android-xml-font-views'
+    libraryName = 'android-xml-font-views'
+    artifact = 'android-xml-font-views'
 
     libraryDescription = 'Standard Android View extended with XML Font property'
 
