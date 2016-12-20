@@ -15,6 +15,7 @@ public class XMLFontButton extends Button
 
     private String mFontName;
 
+    // Designated Initializers
     public XMLFontButton(Context context)
     {
         this(context, null);
@@ -34,6 +35,7 @@ public class XMLFontButton extends Button
         initWithAttributes(attrs, defStyleAttr);
     }
 
+    // Common Initializer
     private void initWithAttributes(AttributeSet attrs, int defStyleAttr)
     {
         final TypedArray attributes = mContext.getTheme().obtainStyledAttributes(attrs, R.styleable.XMLFontButton, defStyleAttr, 0);

@@ -15,6 +15,7 @@ public class XMLFontTextView extends TextView
 
     private String mFontName;
 
+    // Designated Initializers
     public XMLFontTextView(Context context)
     {
         this(context, null);
@@ -34,6 +35,7 @@ public class XMLFontTextView extends TextView
         initWithAttributes(attrs, defStyleAttr);
     }
 
+    // Common Initializer
     private void initWithAttributes(AttributeSet attrs, int defStyleAttr)
     {
         final TypedArray attributes = mContext.getTheme().obtainStyledAttributes(attrs, R.styleable.XMLFontTextView, defStyleAttr, 0);

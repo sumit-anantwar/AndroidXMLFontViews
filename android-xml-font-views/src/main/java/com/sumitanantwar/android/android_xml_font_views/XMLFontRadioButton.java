@@ -15,6 +15,7 @@ public class XMLFontRadioButton extends RadioButton
 
     private String mFontName;
 
+    // Designated Initializers
     public XMLFontRadioButton(Context context)
     {
         this(context, null);
@@ -36,6 +37,7 @@ public class XMLFontRadioButton extends RadioButton
         initWithAttributes(attrs, defStyleAttr);
     }
 
+    // Common Initializer
     private void initWithAttributes(AttributeSet attrs, int defStyleAttr)
     {
         final TypedArray attributes = mContext.getTheme().obtainStyledAttributes(attrs, R.styleable.XMLFontRadioButton, defStyleAttr, 0);
