@@ -20,8 +20,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="17dp"
-            android:text="&#xef0a2; ~ Button ~ &#xef0a2;"
-            app:font_name="FontAwesome.otf"/>
+            android:text="&#xf0a2; ~ Button ~ &#xf0a2;"
+            app:font_file="FontAwesome.otf"/>
 
         <com.sumitanantwar.android.android_xml_font_views.XMLFontButton
             android:layout_width="0dp"
@@ -30,7 +30,7 @@
             android:gravity="center"
             android:text="Button"
             android:textSize="27dp"
-            app:font_name="Heaven.ttf"/>
+            app:font_file="Heaven.ttf"/>
 
     </LinearLayout>
 
@@ -43,8 +43,8 @@
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:textSize="30dp"
-            android:text="&#xef0a4;"
-            app:font_name="FontAwesome.otf"/>
+            android:text="&#xf0a4;"
+            app:font_file="FontAwesome.otf"/>
 
         <Space
             android:layout_width="0dp"
@@ -56,8 +56,8 @@
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:textSize="30dp"
-            android:text="&#xef0a1;"
-            app:font_name="FontAwesome.otf"/>
+            android:text="&#xf0a1;"
+            app:font_file="FontAwesome.otf"/>
 
         <Space
             android:layout_width="0dp"
@@ -69,8 +69,8 @@
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:textSize="30dp"
-            android:text="&#xef0a2;"
-            app:font_name="FontAwesome.otf"/>
+            android:text="&#xf0a2;"
+            app:font_file="FontAwesome.otf"/>
 
         <Space
             android:layout_width="0dp"
@@ -82,8 +82,8 @@
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:textSize="30dp"
-            android:text="&#xef0a3;"
-            app:font_name="FontAwesome.otf"/>
+            android:text="&#xf0a3;"
+            app:font_file="FontAwesome.otf"/>
 
         <Space
             android:layout_width="0dp"
@@ -95,8 +95,8 @@
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:textSize="30dp"
-            android:text="&#xef0a5;"
-            app:font_name="FontAwesome.otf"/>
+            android:text="&#xf0a5;"
+            app:font_file="FontAwesome.otf"/>
 
     </LinearLayout>
 
@@ -104,7 +104,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <com.sumitanantwar.android.android_xml_font_views.XMLTextView
+        <com.sumitanantwar.android.android_xml_font_views.XMLFontTextView
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
@@ -112,8 +112,26 @@
             android:gravity="center"
             android:textSize="30sp"
             android:text="Stylized TextView"
-            app:font_name="SweetSensations.ttf"/>
+            app:font_file="SweetSensations.ttf"/>
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.sumitanantwar.android.android_xml_font_views.XMLFontRadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Radio Button"
+                android:textSize="25sp"
+                app:font_file="Heaven.ttf"/>
+
+        </RadioGroup>
     </LinearLayout>
 
 </LinearLayout>

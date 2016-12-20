@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <attr name="font_name" format="string"/>
-
-    <declare-styleable name="XMLFontTextView">
-        <attr name="font_name"/>
-    </declare-styleable>
+    <attr name="font_file" format="string"/>
 
     <declare-styleable name="XMLFontButton">
-        <attr name="font_name"/>
+        <attr name="font_file"/>
+    </declare-styleable>
+
+    <declare-styleable name="XMLFontTextView">
+        <attr name="font_file"/>
+    </declare-styleable>
+
+    <declare-styleable name="XMLFontRadioButton">
+        <attr name="font_file"/>
     </declare-styleable>
 
 </resources>

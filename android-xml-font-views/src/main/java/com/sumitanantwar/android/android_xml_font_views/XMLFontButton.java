@@ -3,7 +3,6 @@ package com.sumitanantwar.android.android_xml_font_views;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.widget.Button;
 
 /**
@@ -39,7 +38,7 @@ public class XMLFontButton extends Button
     {
         final TypedArray attributes = mContext.getTheme().obtainStyledAttributes(attrs, R.styleable.XMLFontButton, defStyleAttr, 0);
 
-        String fontName = attributes.getString(R.styleable.XMLFontButton_font_name);
+        String fontName = attributes.getString(R.styleable.XMLFontButton_font_file);
         if (fontName != null) setFontName(fontName);
 
         attributes.recycle();
