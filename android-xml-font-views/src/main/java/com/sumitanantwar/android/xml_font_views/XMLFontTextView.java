@@ -1,4 +1,4 @@
-package com.sumitanantwar.android.android_xml_font_views;
+package com.sumitanantwar.android.xml_font_views;
 
 import android.content.Context;
 import android.content.res.TypedArray;

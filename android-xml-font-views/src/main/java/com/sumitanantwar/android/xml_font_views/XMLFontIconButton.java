@@ -1,18 +1,14 @@
-package com.sumitanantwar.android.android_xml_font_views;
+package com.sumitanantwar.android.xml_font_views;
 
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
-import android.graphics.Color;
-import android.support.annotation.ColorRes;
-import android.support.annotation.Dimension;
 import android.support.annotation.IntDef;
 import android.support.annotation.NonNull;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
-import android.widget.TextView;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

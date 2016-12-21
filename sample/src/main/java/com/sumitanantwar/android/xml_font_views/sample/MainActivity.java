@@ -1,4 +1,4 @@
-package com.sumitanantwar.android.android_xml_font_views.sample;
+package com.sumitanantwar.android.xml_font_views.sample;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

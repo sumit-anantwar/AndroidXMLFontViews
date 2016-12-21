@@ -7,7 +7,7 @@
     android:layout_height="wrap_content"
     android:gravity="center_horizontal">
 
-    <com.sumitanantwar.android.android_xml_font_views.XMLFontTextView
+    <com.sumitanantwar.android.xml_font_views.XMLFontTextView
         android:id="@+id/FIB_TopIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -22,13 +22,13 @@
         android:layout_height="wrap_content"
         android:gravity="center_vertical">
 
-        <com.sumitanantwar.android.android_xml_font_views.XMLFontTextView
+        <com.sumitanantwar.android.xml_font_views.XMLFontTextView
             android:id="@+id/FIB_LeftIcon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"/>
 
-        <com.sumitanantwar.android.android_xml_font_views.XMLFontTextView
+        <com.sumitanantwar.android.xml_font_views.XMLFontTextView
             android:id="@+id/FIB_MainText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -37,7 +37,7 @@
             android:text="Icon Button"
             android:textSize="30dp"/>
 
-        <com.sumitanantwar.android.android_xml_font_views.XMLFontTextView
+        <com.sumitanantwar.android.xml_font_views.XMLFontTextView
             android:id="@+id/FIB_RightIcon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -45,7 +45,7 @@
 
     </LinearLayout>
 
-    <com.sumitanantwar.android.android_xml_font_views.XMLFontTextView
+    <com.sumitanantwar.android.xml_font_views.XMLFontTextView
         android:id="@+id/FIB_BottomIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
