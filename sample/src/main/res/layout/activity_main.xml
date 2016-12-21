@@ -134,4 +134,20 @@
         </RadioGroup>
     </LinearLayout>
 
+    <com.sumitanantwar.android.android_xml_font_views.XMLFontIconButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:text="Icon Button"
+        app:font_file="Heaven.ttf"
+        app:text_size="20sp"
+        app:text_color="@color/colorAccent"
+        app:icon_character="&#xf0a5;"
+        app:icon_font_file="FontAwesome.otf"
+        app:icon_size="35dp"
+        app:icon_position="right"
+        app:icon_padding="15dp"
+        android:background="@color/colorPrimaryDark"
+        android:padding="10dp"/>
+
+
 </LinearLayout>

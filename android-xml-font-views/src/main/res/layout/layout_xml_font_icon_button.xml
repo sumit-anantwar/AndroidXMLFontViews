@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal">
+
+    <com.sumitanantwar.android.android_xml_font_views.XMLFontTextView
+        android:id="@+id/FIB_TopIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="70dp"
+        android:text="&#xf0a5;"
+        app:font_file="FontAwesome.otf"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <com.sumitanantwar.android.android_xml_font_views.XMLFontTextView
+            android:id="@+id/FIB_LeftIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"/>
+
+        <com.sumitanantwar.android.android_xml_font_views.XMLFontTextView
+            android:id="@+id/FIB_MainText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Icon Button"
+            android:textSize="30dp"/>
+
+        <com.sumitanantwar.android.android_xml_font_views.XMLFontTextView
+            android:id="@+id/FIB_RightIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <com.sumitanantwar.android.android_xml_font_views.XMLFontTextView
+        android:id="@+id/FIB_BottomIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"/>
+
+</LinearLayout>

@@ -13,7 +13,7 @@ public class XMLFontRadioButton extends RadioButton
 {
     private final Context mContext;
 
-    private String mFontName;
+    private String mFontFile;
 
     // Designated Initializers
     public XMLFontRadioButton(Context context)
@@ -24,7 +24,6 @@ public class XMLFontRadioButton extends RadioButton
     public XMLFontRadioButton(Context context, AttributeSet attrs)
     {
         super(context, attrs);
-
         mContext = context;
         initWithAttributes(attrs, 0);
     }
@@ -32,7 +31,6 @@ public class XMLFontRadioButton extends RadioButton
     public XMLFontRadioButton(Context context, AttributeSet attrs, int defStyleAttr)
     {
         super(context, attrs, defStyleAttr);
-
         mContext = context;
         initWithAttributes(attrs, defStyleAttr);
     }
@@ -42,21 +40,21 @@ public class XMLFontRadioButton extends RadioButton
     {
         final TypedArray attributes = mContext.getTheme().obtainStyledAttributes(attrs, R.styleable.XMLFontRadioButton, defStyleAttr, 0);
 
-        String fontName = attributes.getString(R.styleable.XMLFontRadioButton_font_file);
-        if (fontName != null) setFontName(fontName);
+        String fontFilename = attributes.getString(R.styleable.XMLFontRadioButton_font_file);
+        if (fontFilename != null) setFontFile(fontFilename);
 
         attributes.recycle();
     }
 
-    public void setFontName(String fontName)
+    public void setFontFile(String filename)
     {
-        mFontName = fontName;
+        mFontFile = filename;
 
-        setTypeface(FontManager.getTypeFaceForFont(mContext, fontName));
+        setTypeface(FontManager.getTypeFaceForFont(mContext, filename));
     }
 
     public String getFontName()
     {
-        return mFontName;
+        return mFontFile;
     }
 }

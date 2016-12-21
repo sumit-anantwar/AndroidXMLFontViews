@@ -13,7 +13,7 @@ public class XMLFontButton extends Button
 {
     private final Context mContext;
 
-    private String mFontName;
+    private String mFontFile;
 
     // Designated Initializers
     public XMLFontButton(Context context)
@@ -40,21 +40,21 @@ public class XMLFontButton extends Button
     {
         final TypedArray attributes = mContext.getTheme().obtainStyledAttributes(attrs, R.styleable.XMLFontButton, defStyleAttr, 0);
 
-        String fontName = attributes.getString(R.styleable.XMLFontButton_font_file);
-        if (fontName != null) setFontName(fontName);
+        String fontFilename = attributes.getString(R.styleable.XMLFontButton_font_file);
+        if (fontFilename != null) setFontFile(fontFilename);
 
         attributes.recycle();
     }
 
-    public void setFontName(String fontName)
+    public void setFontFile(String filename)
     {
-        mFontName = fontName;
+        mFontFile = filename;
 
-        setTypeface(FontManager.getTypeFaceForFont(mContext, fontName));
+        setTypeface(FontManager.getTypeFaceForFont(mContext, filename));
     }
 
     public String getFontName()
     {
-        return mFontName;
+        return mFontFile;
     }
 }
