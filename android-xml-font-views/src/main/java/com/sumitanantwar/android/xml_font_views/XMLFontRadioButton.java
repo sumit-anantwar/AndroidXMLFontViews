@@ -53,7 +53,7 @@ public class XMLFontRadioButton extends RadioButton
         setTypeface(FontManager.getTypeFaceForFont(mContext, filename));
     }
 
-    public String getFontName()
+    public String getFontFile()
     {
         return mFontFile;
     }

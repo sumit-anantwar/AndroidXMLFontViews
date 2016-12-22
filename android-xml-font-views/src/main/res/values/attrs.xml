@@ -17,6 +17,10 @@
         <attr name="font_file"/>
     </declare-styleable>
 
+    <declare-styleable name="XMLFontEditText">
+        <attr name="font_file"/>
+    </declare-styleable>
+
     <declare-styleable name="XMLFontRadioButton">
         <attr name="font_file"/>
     </declare-styleable>
