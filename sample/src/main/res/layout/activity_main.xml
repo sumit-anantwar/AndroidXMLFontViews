@@ -8,14 +8,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="12dp"
-    tools:context="com.sumitanantwar.android.android_xml_font_views.sample.MainActivity">
+    tools:context="com.sumitanantwar.android.xml_font_views.sample.MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical">
 
-        <com.sumitanantwar.android.android_xml_font_views.XMLFontButton
+        <com.sumitanantwar.android.xml_font_views.XMLFontButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -23,7 +23,7 @@
             android:text="&#xf0a2; ~ Button ~ &#xf0a2;"
             app:font_file="FontAwesome.otf"/>
 
-        <com.sumitanantwar.android.android_xml_font_views.XMLFontButton
+        <com.sumitanantwar.android.xml_font_views.XMLFontButton
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
@@ -39,7 +39,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <com.sumitanantwar.android.android_xml_font_views.XMLFontButton
+        <com.sumitanantwar.android.xml_font_views.XMLFontButton
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:textSize="30dp"
@@ -52,7 +52,7 @@
             android:layout_weight="1" >
         </Space>
 
-        <com.sumitanantwar.android.android_xml_font_views.XMLFontButton
+        <com.sumitanantwar.android.xml_font_views.XMLFontButton
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:textSize="30dp"
@@ -65,7 +65,7 @@
             android:layout_weight="1" >
         </Space>
 
-        <com.sumitanantwar.android.android_xml_font_views.XMLFontButton
+        <com.sumitanantwar.android.xml_font_views.XMLFontButton
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:textSize="30dp"
@@ -78,7 +78,7 @@
             android:layout_weight="1" >
         </Space>
 
-        <com.sumitanantwar.android.android_xml_font_views.XMLFontButton
+        <com.sumitanantwar.android.xml_font_views.XMLFontButton
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:textSize="30dp"
@@ -91,7 +91,7 @@
             android:layout_weight="1" >
         </Space>
 
-        <com.sumitanantwar.android.android_xml_font_views.XMLFontButton
+        <com.sumitanantwar.android.xml_font_views.XMLFontButton
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:textSize="30dp"
@@ -104,7 +104,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <com.sumitanantwar.android.android_xml_font_views.XMLFontTextView
+        <com.sumitanantwar.android.xml_font_views.XMLFontTextView
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
@@ -124,7 +124,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <com.sumitanantwar.android.android_xml_font_views.XMLFontRadioButton
+            <com.sumitanantwar.android.xml_font_views.XMLFontRadioButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Radio Button"
@@ -133,5 +133,21 @@
 
         </RadioGroup>
     </LinearLayout>
+
+    <com.sumitanantwar.android.xml_font_views.XMLFontIconButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:text="Icon Button"
+        app:font_file="Heaven.ttf"
+        app:text_size="20sp"
+        app:text_color="@color/colorAccent"
+        app:icon_character="&#xf0a5;"
+        app:icon_font_file="FontAwesome.otf"
+        app:icon_size="35dp"
+        app:icon_position="right"
+        app:icon_padding="15dp"
+        android:background="@color/colorPrimaryDark"
+        android:padding="10dp"/>
+
 
 </LinearLayout>
