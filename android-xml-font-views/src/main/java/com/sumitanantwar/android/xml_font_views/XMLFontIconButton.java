@@ -19,19 +19,19 @@ import java.lang.annotation.RetentionPolicy;
 
 public class XMLFontIconButton extends FrameLayout
 {
-    private final Context mContext;
+    private final Context context;
 
-    private CharSequence mText;
-    private String mFontFile;
+    private CharSequence text;
+    private String       fontFile;
 
-    private CharSequence mIconCharacter;
-    private String mIconFontFile;
+    private CharSequence iconCharacter;
+    private String       iconFontFile;
 
-    private XMLFontTextView mTopIconView;
-    private XMLFontTextView mLeftIconView;
-    private XMLFontTextView mRightIconView;
-    private XMLFontTextView mBottomIconView;
-    private XMLFontTextView mMainTextView;
+    private XMLFontTextView topIconView;
+    private XMLFontTextView leftIconView;
+    private XMLFontTextView rightIconView;
+    private XMLFontTextView bottomIconView;
+    private XMLFontTextView mainTextView;
 
     @IntDef({
             ICON_POSITION_LEFT,
@@ -61,7 +61,7 @@ public class XMLFontIconButton extends FrameLayout
     {
         super(context, attrs, defStyleAttr);
 
-        mContext = context;
+        this.context = context;
         initWithAttributes(attrs, defStyleAttr);
     }
 
@@ -70,13 +70,13 @@ public class XMLFontIconButton extends FrameLayout
     private void initWithAttributes(AttributeSet attrs, int defStyleAttr)
     {
         FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
-        View view       = inflate(mContext, R.layout.layout_xml_font_icon_button, null);
+        View view       = inflate(context, R.layout.layout_xml_font_icon_button, null);
 
-        mLeftIconView   = (XMLFontTextView) view.findViewById(R.id.FIB_LeftIcon);
-        mRightIconView  = (XMLFontTextView) view.findViewById(R.id.FIB_RightIcon);
-        mTopIconView    = (XMLFontTextView) view.findViewById(R.id.FIB_TopIcon);
-        mBottomIconView = (XMLFontTextView) view.findViewById(R.id.FIB_BottomIcon);
-        mMainTextView   = (XMLFontTextView) view.findViewById(R.id.FIB_MainText);
+        leftIconView = (XMLFontTextView) view.findViewById(R.id.FIB_LeftIcon);
+        rightIconView = (XMLFontTextView) view.findViewById(R.id.FIB_RightIcon);
+        topIconView = (XMLFontTextView) view.findViewById(R.id.FIB_TopIcon);
+        bottomIconView = (XMLFontTextView) view.findViewById(R.id.FIB_BottomIcon);
+        mainTextView = (XMLFontTextView) view.findViewById(R.id.FIB_MainText);
 
         view.setLayoutParams(params);
         addView(view);
@@ -86,7 +86,7 @@ public class XMLFontIconButton extends FrameLayout
         int iconPosition = ICON_POSITION_LEFT;
         int iconPadding = 10;
 
-        final TypedArray attributes = mContext.getTheme().obtainStyledAttributes(attrs, R.styleable.XMLFontIconButton, defStyleAttr, 0);
+        final TypedArray attributes = context.getTheme().obtainStyledAttributes(attrs, R.styleable.XMLFontIconButton, defStyleAttr, 0);
 
         String mainText = attributes.getString(R.styleable.XMLFontIconButton_text);
         setText(mainText);
@@ -123,66 +123,66 @@ public class XMLFontIconButton extends FrameLayout
 
     public void setFontFile(String filename)
     {
-        mFontFile = filename;
-        mMainTextView.setFontFile(filename);
+        fontFile = filename;
+        mainTextView.setFontFile(filename);
 
         invalidate();
     }
 
     public String getFontFile()
     {
-        return mFontFile;
+        return fontFile;
     }
 
     public void setTextSize(float size)
     {
-        mMainTextView.setTextSize(size);
+        mainTextView.setTextSize(size);
 
         invalidate();
     }
 
     public void setText(CharSequence text)
     {
-        mText = text;
+        this.text = text;
 
-        mMainTextView.setText(text);
+        mainTextView.setText(text);
         invalidate();
     }
 
     public CharSequence getText()
     {
-        return mText;
+        return text;
     }
 
     public void setTextColor(@NonNull ColorStateList color)
     {
-        mMainTextView.setTextColor(color);
+        mainTextView.setTextColor(color);
         invalidate();
     }
 
     public void setIconCharacter(CharSequence character)
     {
-        mIconCharacter = character;
+        iconCharacter = character;
 
-        mLeftIconView.setText(character);
-        mRightIconView.setText(character);
-        mTopIconView.setText(character);
-        mBottomIconView.setText(character);
+        leftIconView.setText(character);
+        rightIconView.setText(character);
+        topIconView.setText(character);
+        bottomIconView.setText(character);
 
         invalidate();
     }
 
     public CharSequence getIconCharacter()
     {
-        return mIconCharacter;
+        return iconCharacter;
     }
 
     public void setIconColor(@NonNull ColorStateList color)
     {
-        mLeftIconView.setTextColor(color);
-        mRightIconView.setTextColor(color);
-        mTopIconView.setTextColor(color);
-        mBottomIconView.setTextColor(color);
+        leftIconView.setTextColor(color);
+        rightIconView.setTextColor(color);
+        topIconView.setTextColor(color);
+        bottomIconView.setTextColor(color);
 
         invalidate();
     }
@@ -190,48 +190,48 @@ public class XMLFontIconButton extends FrameLayout
 
     public void setIconFontFile(String filename)
     {
-        mIconFontFile = filename;
-        mLeftIconView.setFontFile(filename);
-        mRightIconView.setFontFile(filename);
-        mTopIconView.setFontFile(filename);
-        mBottomIconView.setFontFile(filename);
+        iconFontFile = filename;
+        leftIconView.setFontFile(filename);
+        rightIconView.setFontFile(filename);
+        topIconView.setFontFile(filename);
+        bottomIconView.setFontFile(filename);
 
         invalidate();
     }
 
     public void setIconSize(float size)
     {
-        mTopIconView.setTextSize(size);
-        mLeftIconView.setTextSize(size);
-        mRightIconView.setTextSize(size);
-        mBottomIconView.setTextSize(size);
+        topIconView.setTextSize(size);
+        leftIconView.setTextSize(size);
+        rightIconView.setTextSize(size);
+        bottomIconView.setTextSize(size);
 
         invalidate();
     }
 
     public void setIconPosition(@IconPosition int position)
     {
-        mLeftIconView.setVisibility(GONE);
-        mRightIconView.setVisibility(GONE);
-        mTopIconView.setVisibility(GONE);
-        mBottomIconView.setVisibility(GONE);
+        leftIconView.setVisibility(GONE);
+        rightIconView.setVisibility(GONE);
+        topIconView.setVisibility(GONE);
+        bottomIconView.setVisibility(GONE);
 
         switch (position)
         {
             case ICON_POSITION_LEFT:
-                mLeftIconView.setVisibility(VISIBLE);
+                leftIconView.setVisibility(VISIBLE);
                 break;
 
             case ICON_POSITION_RIGHT:
-                mRightIconView.setVisibility(VISIBLE);
+                rightIconView.setVisibility(VISIBLE);
                 break;
 
             case ICON_POSITION_TOP:
-                mTopIconView.setVisibility(VISIBLE);
+                topIconView.setVisibility(VISIBLE);
                 break;
 
             case ICON_POSITION_BOTTOM:
-                mBottomIconView.setVisibility(VISIBLE);
+                bottomIconView.setVisibility(VISIBLE);
                 break;
         }
 
@@ -240,10 +240,10 @@ public class XMLFontIconButton extends FrameLayout
 
     public void setIconPadding(int padding)
     {
-        mLeftIconView.setPadding(padding, padding, padding, padding);
-        mRightIconView.setPadding(padding, padding, padding, padding);
-        mTopIconView.setPadding(padding, padding, padding, padding);
-        mBottomIconView.setPadding(padding, padding, padding, padding);
+        leftIconView.setPadding(padding, padding, padding, padding);
+        rightIconView.setPadding(padding, padding, padding, padding);
+        topIconView.setPadding(padding, padding, padding, padding);
+        bottomIconView.setPadding(padding, padding, padding, padding);
 
         invalidate();
     }

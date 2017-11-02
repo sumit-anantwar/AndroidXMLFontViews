@@ -2,14 +2,14 @@ package com.sumitanantwar.android.xml_font_views;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.support.v7.widget.AppCompatRadioButton;
 import android.util.AttributeSet;
-import android.widget.RadioButton;
 
 /**
  * Created by Sumit Anantwar on 12/17/16.
  */
 
-public class XMLFontRadioButton extends RadioButton
+public class XMLFontRadioButton extends AppCompatRadioButton
 {
     private final Context mContext;
 

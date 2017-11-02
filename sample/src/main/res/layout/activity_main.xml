@@ -149,6 +149,18 @@
         android:background="@color/colorPrimaryDark"
         android:padding="10dp"/>
 
+    <com.sumitanantwar.android.xml_font_views.XMLFontIconEditText
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:hint="XMLFontIconEditText"
+        app:font_file="Heaven.ttf"
+        app:icon_character="&#xf0a4;"
+        app:icon_position="left"
+        app:icon_size="30dp"
+        app:icon_font_file="FontAwesome.otf"
+        app:icon_color="#000"
+        android:text="Sample Text"/>
+
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"

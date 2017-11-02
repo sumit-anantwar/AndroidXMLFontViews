@@ -2,14 +2,14 @@ package com.sumitanantwar.android.xml_font_views;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.support.v7.widget.AppCompatButton;
 import android.util.AttributeSet;
-import android.widget.Button;
 
 /**
  * Created by Sumit Anantwar on 12/17/16.
  */
 
-public class XMLFontButton extends Button
+public class XMLFontButton extends AppCompatButton
 {
     private final Context mContext;
 

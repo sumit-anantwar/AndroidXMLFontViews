@@ -2,11 +2,18 @@
 <resources>
     <attr name="font_file" format="string"/>
     <attr name="icon_font_file" format="string"/>
+    <attr name="icon_character" format="string"/>
+    <attr name="icon_size" format="dimension"/>
+    <attr name="icon_color" format="color"/>
     <attr name="icon_position" format="integer">
         <enum name="left"   value="0"/>
         <enum name="right"  value="1"/>
         <enum name="top"    value="2"/>
         <enum name="bottom" value="3"/>
+    </attr>
+    <attr name="et_icon_position" format="integer">
+        <enum name="left"   value="0"/>
+        <enum name="right"  value="1"/>
     </attr>
 
     <declare-styleable name="XMLFontButton">
@@ -21,6 +28,15 @@
         <attr name="font_file"/>
     </declare-styleable>
 
+    <declare-styleable name="XMLFontIconEditText">
+        <attr name="font_file"/>
+        <attr name="icon_character"/>
+        <attr name="icon_size"/>
+        <attr name="icon_color"/>
+        <attr name="icon_font_file"/>
+        <attr name="icon_position"/>
+    </declare-styleable>
+
     <declare-styleable name="XMLFontRadioButton">
         <attr name="font_file"/>
     </declare-styleable>
@@ -30,9 +46,9 @@
         <attr name="text_size" format="dimension"/>
         <attr name="text_color" format="color"/>
         <attr name="font_file"/>
-        <attr name="icon_character" format="string"/>
-        <attr name="icon_size" format="dimension"/>
-        <attr name="icon_color" format="color"/>
+        <attr name="icon_character"/>
+        <attr name="icon_size"/>
+        <attr name="icon_color"/>
         <attr name="icon_font_file"/>
         <attr name="icon_position"/>
         <attr name="icon_padding" format="dimension"/>

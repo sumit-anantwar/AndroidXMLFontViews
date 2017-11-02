@@ -11,10 +11,7 @@
         android:id="@+id/FIB_TopIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="70dp"
-        android:text="&#xf0a5;"
-        app:font_file="FontAwesome.otf"/>
+        android:gravity="center"/>
 
     <LinearLayout
         android:orientation="horizontal"

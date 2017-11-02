@@ -3,17 +3,17 @@ package com.sumitanantwar.android.xml_font_views;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
-import android.widget.TextView;
+import android.support.v7.widget.AppCompatTextView;
 
 /**
  * Created by Sumit Anantwar on 12/17/16.
  */
 
-public class XMLFontTextView extends TextView
+public class XMLFontTextView extends AppCompatTextView
 {
-    private final Context mContext;
+    private final Context context;
 
-    private String mFontFile;
+    private String fontFile;
 
     // Designated Initializers
     public XMLFontTextView(Context context)
@@ -24,21 +24,21 @@ public class XMLFontTextView extends TextView
     public XMLFontTextView(Context context, AttributeSet attrs)
     {
         super(context, attrs);
-        mContext = context;
+        this.context = context;
         initWithAttributes(attrs, 0);
     }
 
     public XMLFontTextView(Context context, AttributeSet attrs, int defStyleAttr)
     {
         super(context, attrs, defStyleAttr);
-        mContext = context;
+        this.context = context;
         initWithAttributes(attrs, defStyleAttr);
     }
 
     // Common Initializer
     private void initWithAttributes(AttributeSet attrs, int defStyleAttr)
     {
-        final TypedArray attributes = mContext.getTheme().obtainStyledAttributes(attrs, R.styleable.XMLFontTextView, defStyleAttr, 0);
+        final TypedArray attributes = context.getTheme().obtainStyledAttributes(attrs, R.styleable.XMLFontTextView, defStyleAttr, 0);
 
         String fontFilename = attributes.getString(R.styleable.XMLFontTextView_font_file);
         if (fontFilename != null) setFontFile(fontFilename);
@@ -48,13 +48,13 @@ public class XMLFontTextView extends TextView
 
     public void setFontFile(String filename)
     {
-        mFontFile = filename;
+        fontFile = filename;
 
-        setTypeface(FontManager.getTypeFaceForFont(mContext, filename));
+        setTypeface(FontManager.getTypeFaceForFont(context, filename));
     }
 
     public String getFontFile()
     {
-        return mFontFile;
+        return fontFile;
     }
 }

@@ -2,18 +2,18 @@ package com.sumitanantwar.android.xml_font_views;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.support.v7.widget.AppCompatEditText;
 import android.util.AttributeSet;
-import android.widget.EditText;
 
 /**
  * Created by Sumit Anantwar on 12/22/16.
  */
 
-public class XMLFontEditText extends EditText
+public class XMLFontEditText extends AppCompatEditText
 {
-    private final Context mContext;
+    private final Context context;
 
-    private String mFontFile;
+    private String fontFile;
 
     public XMLFontEditText(Context context)
     {
@@ -23,21 +23,21 @@ public class XMLFontEditText extends EditText
     public XMLFontEditText(Context context, AttributeSet attrs)
     {
         super(context, attrs);
-        mContext = context;
+        this.context = context;
         initWithAttributes(attrs, 0);
     }
 
     public XMLFontEditText(Context context, AttributeSet attrs, int defStyleAttr)
     {
         super(context, attrs, defStyleAttr);
-        mContext = context;
+        this.context = context;
         initWithAttributes(attrs, defStyleAttr);
     }
 
     // Common Initializer
     private void initWithAttributes(AttributeSet attrs, int defStyleAttr)
     {
-        final TypedArray attributes = mContext.getTheme().obtainStyledAttributes(attrs, R.styleable.XMLFontEditText, defStyleAttr, 0);
+        final TypedArray attributes = context.getTheme().obtainStyledAttributes(attrs, R.styleable.XMLFontEditText, defStyleAttr, 0);
 
         String fontFilename = attributes.getString(R.styleable.XMLFontEditText_font_file);
         if (fontFilename != null) setFontFile(fontFilename);
@@ -47,13 +47,13 @@ public class XMLFontEditText extends EditText
 
     public void setFontFile(String filename)
     {
-        mFontFile = filename;
+        fontFile = filename;
 
-        setTypeface(FontManager.getTypeFaceForFont(mContext, filename));
+        setTypeface(FontManager.getTypeFaceForFont(context, filename));
     }
 
     public String getFontFile()
     {
-        return mFontFile;
+        return fontFile;
     }
 }
