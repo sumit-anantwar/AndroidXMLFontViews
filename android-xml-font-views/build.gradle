@@ -42,7 +42,7 @@ ext {
     siteUrl = 'https://github.com/sumit-anantwar/android-xml-font-views'
     gitUrl = 'https://github.com/sumit-anantwar/android-xml-font-views.git'
 
-    libraryVersion = '0.0.3'
+    libraryVersion = '0.0.5'
 
     developerId = 'sumit-anantwar'
     developerName = 'Sumit Anantwar'
