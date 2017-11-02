@@ -29,7 +29,7 @@ public class XMLFontIconEditText extends AppCompatEditText
 
     private String fontFile;
 
-    private String iconCharacter = "Alpha";
+    private String iconCharacter = "";
     private String iconFontFile;
     private @IconPosition int iconPosition;
     private Paint iconPaint = new Paint();
@@ -176,7 +176,6 @@ public class XMLFontIconEditText extends AppCompatEditText
         float cX = (iconPosition == ICON_POSITION_LEFT) ? iconOffset : (getMeasuredWidth() - iconOffset);
         float cY = ((getMeasuredHeight() / 2) + getScrollY());
 
-        if (iconCharacter ==  null) iconCharacter = "Beta";
         canvas.drawText(iconCharacter, cX, (cY + (iconPaint.getTextSize() * 0.35f)), iconPaint);
         Log.i(LOG_TAG, "onDraw: Drawing Icon Character");
     }
